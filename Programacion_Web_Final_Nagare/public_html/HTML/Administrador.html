@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administracion - Nagare Coffe & Matcha</title>
+    <link rel="stylesheet" href="../CSS/Principal.css">
+</head>
+<body>
+    <header class="nagare-header">
+
+    <!-- BARRA SUPERIOR -->
+    <div class="nagare-topbar">
+
+        <div class="nagare-logo">
+
+            <img src="../IMG/Logo_Nagare.jpg" alt="Nagare">
+
+            <div>
+                <h1>NAGARE</h1>
+                <span>Coffee & Matcha</span>
+            </div>
+
+        </div>
+
+        <div class="nagare-top-menu">
+
+            <a href="Login.html">👤 Cerrar Sesión</a>
+
+        </div>
+
+
+    </div>
+
+</header>
+
+<section class="nagare-admin-section">
+    <div class="nagare-admin-container">
+        
+        <div class="nagare-admin-header">
+            <h2>💼 Panel de Administración</h2>
+            <p>Bienvenido Administrador. Gestión estructural de inventario.</p>
+        </div>
+
+        <!-- PASO 1: CONFIGURACIÓN DEL TAMAÑO DEL ARREGLO01 -->
+        <div class="nagare-card-setup" id="setup-arreglo">
+            <h3>📏 Escoja la cantidad de productos a ingresar </h3>
+            <div class="nagare-flex-row">
+                <input type="number" id="tamano-array" placeholder="Definir cuantos tipos de productos" min="1">
+                <button onclick="inicializarArray()" class="nagare-btn-primary">Definir Productos</button>
+            </div>
+        </div>
+
+        <!-- MENÚ DE OPCIONES E INGRESOS (Bloqueado hasta definir tamaño) -->
+        <div class="nagare-admin-grid disabled-panel" id="panel-principal">
+            
+            <!-- Bloque Izquierdo: Ingresar Datos -->
+            <div class="nagare-admin-card">
+                <h3>📥 Opción: Ingresar Datos del Producto </h3>
+                <div class="nagare-form-group">
+                    <input type="text" id="codigo" placeholder="Código">
+                    <input type="text" id="nombre" placeholder="Nombre del producto">
+                    <select id="categoria">
+                        <option value="" disabled selected hidden>Selecciona Categoría</option>
+                        <option>Café</option>
+                        <option>Matcha</option>
+                        <option>Postre</option>
+                        <option>Bebida Fría</option>
+                    </select>
+                    <input type="number" id="precio" placeholder="Precio (S/.)">
+                    <input type="number" id="stock" placeholder="Stock">
+                    <button onclick="menuIngresar()" class="nagare-btn-success">Guardar Producto</button>
+                </div>
+            </div>
+
+            <!-- Bloque Derecho: Herramientas del Menú (Buscar, Ordenar, Cambios de Estado) -->
+            <div class="nagare-admin-card">
+                <h3>🛠️ Opciones de Control</h3>
+                
+                <!-- Buscar -->
+                <div class="nagare-buscar-box">
+                    <input type="text" id="buscar" placeholder="Buscar producto por nombre...">
+                    <button onclick="menuBuscar()" class="nagare-btn-info">Buscar</button>
+                </div>
+
+                <hr class="nagare-divider">
+
+                <!-- Acciones de Burbuja y Listas alternas -->
+                <div class="nagare-menu-acciones">
+                    <button onclick="menuOrdenarBurbuja()" class="nagare-btn-warning">🔮 Ordenar </button>
+                    <div class="nagare-btn-group-views">
+                        <button onclick="alternarVista('original')" class="nagare-btn-outline active" id="btn-v-orig">Ver (Original)</button>
+                        <button onclick="alternarVista('final')" class="nagare-btn-outline" id="btn-v-final">Ver (Final Ordenado)</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TABLA DE RESULTADOS DE SALIDA -->
+        <div class="nagare-tabla-section">
+            <div class="nagare-tabla-header">
+                <h3 id="titulo-tabla">Mostrando: Productos (Datos Originales)</h3>
+                <span id="contador" class="nagare-badge">Productos: 0 / 0</span>
+            </div>
+
+            <div class="nagare-table-wrapper">
+                <table class="nagare-table">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nombre</th>
+                            <th>Categoría</th>
+                            <th>Precio</th>
+                            <th>Stock</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaProductos">
+                        <tr>
+                            <td colspan="6" class="nagare-table-empty">No hay registros actualmente.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- CONTROLES ADICIONALES DEL SISTEMA -->
+        <div class="nagare-admin-footer">
+            <button onclick="cerrarSesion()" class="nagare-btn-danger" >Cerrar Sesión</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- BOTÓN FLOTANTE ESTADÍSTICAS -->
+<a href="Estadisticas.html" class="nagare-floating-btn" title="Ver Estadísticas">
+    📊
+</a>
+   
+
+
+
+<footer class="nagare-footer">
+
+    <div class="nagare-footer-contenido">
+
+        <div class="nagare-columna">
+
+            <img src="../IMG/Logo_Nagare.jpg" alt="Logo">
+
+            <h2>NAGARE</h2>
+
+            <p>Coffee & Matcha</p>
+
+        </div>
+
+        <div class="nagare-columna">
+
+            <h3>Contacto</h3>
+
+            <p>📧 nagarecoffee@gmail.com</p>
+
+            <p>📍 Arequipa - Perú</p>
+
+            <p>📞 +51 999 999 999</p>
+
+        </div>
+
+        <div class="nagare-columna">
+
+            <h3>Horario</h3>
+
+            <p>Lunes - Domingo</p>
+
+            <p>08:00 am - 10:00 pm</p>
+
+        </div>
+
+        <div class="nagare-columna">
+
+            <h3>Síguenos</h3>
+            <a href="https://www.facebook.com/profile.php?id=61587873415537">Facebook</a>
+            <a href="https://www.instagram.com/nagarecoffee.aqp/">Instagram</a>
+            <a href="https://www.tiktok.com/@nagareaqp?lang=es-419">TikTok</a>
+        </div>
+
+    </div>
+
+    <div class="nagare-copy">
+
+        © 2026 Nagare Coffee & Matcha | Todos los derechos reservados
+
+    </div>
+
+</footer>
+<script src="../JS/Administrador.js"></script>
+</body>
+</html>

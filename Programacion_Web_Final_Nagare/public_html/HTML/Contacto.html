@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Nagare Coffe & Matcha</title>
+    <link rel="stylesheet" href="../CSS/Principal.css">
+</head>
+<body>
+    <header class="nagare-header">
+
+    <!-- BARRA SUPERIOR -->
+    <div class="nagare-topbar">
+
+        <div class="nagare-logo">
+
+            <img src="../IMG/Logo_Nagare.jpg" alt="Nagare">
+
+            <div>
+                <h1>NAGARE</h1>
+                <span>Coffee & Matcha</span>
+            </div>
+
+        </div>
+
+        <div class="nagare-top-menu">
+
+            <a href="Login.html">👤 Iniciar Sesión</a>
+
+            <a href="Contacto.html"  class="activo">📞 Contacto</a>
+
+            <a href="Pedido.html">🛒 Pedido</a>
+
+        </div>
+
+        <div class="nagare-hamburguesa" id="btnMenu">
+            ☰
+        </div>
+
+    </div>
+
+
+    <!-- MARQUEE -->
+    <div class="nagare-marquee">
+
+        <marquee behavior="scroll" direction="left" scrollamount="6">
+            📞 Estamos listos para ayudarte | Contáctanos y resolveremos todas tus consultas 💬
+        </marquee>
+
+    </div>
+
+
+</header>
+
+
+<!-- MENÚ FUERA DEL HEADER -->
+<nav class="nagare-navbar">
+
+    <ul>
+
+        <li><a href="Inicio.html">Inicio</a></li>
+        <li><a href="Menu.html">Menú</a></li>
+        <li><a href="Eventos.html">Eventos</a></li>
+        <li><a href="Promociones.html">Promociones</a></li>
+        <li><a href="Delivery.html">Delivery</a></li>
+        <li><a href="Reservas.html">Reservas</a></li>
+        <li><a href="Nosotros.html">Nosotros</a></li>
+        <li><a href="Reseñas.html">Reseñas</a></li>
+
+    </ul>
+
+</nav>
+
+   
+<section id="contacto" class="nagare-contacto-section">
+    
+    <div class="nagare-contacto-header">
+        <h2>📞 Contáctanos</h2>
+        <p>Estamos aquí para escucharte. Visítanos, escríbenos o forma parte de nuestro equipo.</p>
+    </div>
+
+    <!-- Contenedor Maestro dividido con CSS Grid -->
+    <div class="nagare-contacto-container">
+
+        <!-- BLOQUE IZQUIERDO: INFORMACIÓN DE MARCA -->
+        <div class="nagare-info-contacto">
+            
+            <a class="nagare-trabajo-btn" href="Trabajo.html">
+                💼 Trabaja con Nosotros
+            </a>
+
+            <div class="nagare-info-item">
+                <h3>📍 Ubicación</h3>
+                <p>Av. Cayma 626, Cayma, Arequipa, Perú, 04002</p>
+            </div>
+
+            <div class="nagare-info-item">
+                <h3>📱 Teléfono</h3>
+                <p><a href="tel:+51934546500">+51 934 546 500</a></p>
+            </div>
+
+            <div class="nagare-info-item">
+                <h3>📧 Correo</h3>
+                <p><a href="mailto:Nagarecoffee@gmail.com">Nagarecoffee@gmail.com</a></p>
+            </div>
+
+            <div class="nagare-info-item">
+                <h3>⏰ Horario</h3>
+                <p>Lun - Dom: 10:00 AM - 9:00 PM</p>
+            </div>
+
+            <a class="nagare-whatsapp-btn" href="https://wa.me/51934546500" target="_blank">
+                💬 Reservar por WhatsApp
+            </a>
+
+        </div>
+
+        <!-- BLOQUE DERECHO: FORMULARIO INTERACTIVO -->
+        <div class="nagare-form-contacto-wrapper">
+            <form class="nagare-form-contacto" onsubmit="event.preventDefault(); alert('✨ ¡Mensaje enviado con éxito! Nos comunicaremos contigo muy pronto.'); this.reset();">
+                
+                <div class="nagare-input-box">
+                    <input type="text" placeholder="Tu nombre" required>
+                </div>
+
+                <div class="nagare-input-box">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                </div>
+
+                <div class="nagare-input-box">
+                    <textarea placeholder="Escribe tu mensaje aquí..." rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="nagare-btn-submit">Enviar Mensaje</button>
+
+            </form>
+        </div>
+
+    </div>
+
+    <!-- MAPA INTEGRADO DE ALTA FIDELIDAD -->
+    <div class="nagare-mapa-wrapper">
+        <iframe 
+            src="https://www.google.com/maps?q=Av.+Cayma+626,+Cayma,+Arequipa&output=embed"
+            width="100%" 
+            height="350" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </div>
+
+</section>
+
+
+<footer class="nagare-footer">
+
+    <div class="nagare-footer-contenido">
+
+        <div class="nagare-columna">
+
+            <img src="../IMG/Logo_Nagare.jpg" alt="Logo">
+
+            <h2>NAGARE</h2>
+
+            <p>Coffee & Matcha</p>
+
+        </div>
+
+        <div class="nagare-columna">
+
+            <h3>Contacto</h3>
+
+            <p>📧 nagarecoffee@gmail.com</p>
+
+            <p>📍 Arequipa - Perú</p>
+
+            <p>📞 +51 999 999 999</p>
+
+        </div>
+
+        <div class="nagare-columna">
+
+            <h3>Horario</h3>
+
+            <p>Lunes - Domingo</p>
+
+            <p>08:00 am - 10:00 pm</p>
+
+        </div>
+
+        <div class="nagare-columna">
+
+            <h3>Síguenos</h3>
+            <a href="https://www.facebook.com/profile.php?id=61587873415537">Facebook</a>
+            <a href="https://www.instagram.com/nagarecoffee.aqp/">Instagram</a>
+            <a href="https://www.tiktok.com/@nagareaqp?lang=es-419">TikTok</a>
+        </div>
+
+    </div>
+
+    <div class="nagare-copy">
+
+        © 2026 Nagare Coffee & Matcha | Todos los derechos reservados
+
+    </div>
+
+</footer>
+<script src="../JS/Principal.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos - Nagare Coffe & Matcha</title>
+<link rel="stylesheet" href="../CSS/Principal.css">
+</head>
+<body>
+    <header class="nagare-header">
+
+    <!-- BARRA SUPERIOR -->
+    <div class="nagare-topbar">
+
+        <div class="nagare-logo">
+
+            <img src="../IMG/Logo_Nagare.jpg" alt="Nagare">
+
+            <div>
+                <h1>NAGARE</h1>
+                <span>Coffee & Matcha</span>
+            </div>
+
+        </div>
+
+        <div class="nagare-top-menu">
+
+            <a href="Login.html">👤 Iniciar Sesión</a>
+
+            <a href="Contacto.html">📞 Contacto</a>
+
+            <a href="Pedido.html" class="activo">🛒 Pedido</a>
+
+        </div>
+
+        <div class="nagare-hamburguesa" id="btnMenu">
+            ☰
+        </div>
+
+    </div>
+
+
+    <!-- MARQUEE -->
+    <div class="nagare-marquee">
+
+        <marquee behavior="scroll" direction="left" scrollamount="6">
+            ☕ Bienvenido a Nagare Coffee & Matcha • 🌿 Prueba nuestro Matcha Premium • 🎉 Promociones todos los viernes • 🚚 Delivery disponible • 📅 Reserva tu mesa hoy mismo
+        </marquee>
+
+    </div>
+
+
+</header>
+
+
+<!-- MENÚ FUERA DEL HEADER -->
+<nav class="nagare-navbar">
+
+    <ul>
+
+        <li><a href="Inicio.html">Inicio</a></li>
+        <li><a href="Menu.html">Menú</a></li>
+        <li><a href="Eventos.html">Eventos</a></li>
+        <li><a href="Promociones.html">Promociones</a></li>
+        <li><a href="Delivery.html">Delivery</a></li>
+        <li><a href="Reservas.html">Reservas</a></li>
+        <li><a href="Nosotros.html">Nosotros</a></li>
+        <li><a href="Reseñas.html">Reseñas</a></li>
+
+    </ul>
+
+</nav>
+
+<section class="nagare-pedido-section">
+    <div class="nagare-pedido-box">
+        
+        <h2>Realizar Pedido</h2>
+        <p class="nagare-pedido-lead">Selecciona tus especialidades favoritas y calcula el presupuesto de tu orden en tiempo real.</p>
+
+        <!-- Formulario estructurado -->
+        <div class="nagare-form-grupo">
+            <select id="producto" required>
+                <option value="" selected disabled hidden></option>
+                <option value="12">Espresso - S/. 12.00</option>
+                <option value="15">Latte - S/. 15.00</option>
+                <option value="18">Matcha Latte - S/. 18.00</option>
+                <option value="14">Frappé - S/. 14.00</option>
+                <option value="10">Cheesecake - S/. 10.00</option>
+                <option value="9">Dorayaki - S/. 9.00</option>
+            </select>
+            <label for="producto">Producto</label>
+        </div>
+
+        <div class="nagare-form-grupo">
+            <input type="number" id="cantidad" min="1" value="" placeholder=" " required>
+            <label for="cantidad">Cantidad</label>
+        </div>
+
+        <div class="nagare-form-grupo">
+            <select id="pago" required>
+                <option value="" selected disabled hidden></option>
+                <option>Efectivo</option>
+                <option>Yape</option>
+                <option>Plin</option>
+                <option>Tarjeta</option>
+            </select>
+            <label for="pago">Método de Pago</label>
+        </div>
+
+        <div class="nagare-form-grupo">
+            <input type="text" id="cupon" placeholder=" " autocomplete="off">
+            <label for="cupon">Cupón de Descuento</label>
+        </div>
+
+        <!-- Botones de Acción Estilizados -->
+        <button class="nagare-btn-calc" onclick="calcularPedido()">
+            🔄 Calcular Total
+        </button>
+
+        <!-- Bloque de visualización premium de resultados -->
+        <div class="nagare-resultado-invoice">
+            <h3>Resumen del Pedido</h3>
+            <div class="nagare-invoice-line">
+                <p id="subtotal">Subtotal: S/. 0.00</p>
+            </div>
+            <div class="nagare-invoice-line">
+                <p id="igv">IGV: S/. 0.00</p>
+            </div>
+            <div class="nagare-invoice-line">
+                <p id="descuento">Descuento: S/. 0.00</p>
+            </div>
+            <div class="nagare-invoice-line nagare-invoice-highlight">
+                <p id="metodo">Método de pago: No seleccionado</p>
+            </div>
+            <div class="nagare-invoice-total">
+                <h2 id="total">Total: S/. 0.00</h2>
+            </div>
+        </div>
+
+        <button class="nagare-btn-confirm" onclick="confirmarPedido()">
+            ✓ Confirmar Pedido
+        </button>
+
+    </div>
+</section>
+
+
+<footer class="nagare-footer">
+
+    <div class="nagare-footer-contenido">
+
+        <div class="nagare-columna">
+
+            <img src="../IMG/Logo_Nagare.jpg" alt="Logo">
+
+            <h2>NAGARE</h2>
+
+            <p>Coffee & Matcha</p>
+
+        </div>
+
+        <div class="nagare-columna">
+
+            <h3>Contacto</h3>
+
+            <p>📧 nagarecoffee@gmail.com</p>
+
+            <p>📍 Arequipa - Perú</p>
+
+            <p>📞 +51 999 999 999</p>
+
+        </div>
+
+        <div class="nagare-columna">
+
+            <h3>Horario</h3>
+
+            <p>Lunes - Domingo</p>
+
+            <p>08:00 am - 10:00 pm</p>
+
+        </div>
+
+        <div class="nagare-columna">
+
+            <h3>Síguenos</h3>
+            <a href="https://www.facebook.com/profile.php?id=61587873415537">Facebook</a>
+            <a href="https://www.instagram.com/nagarecoffee.aqp/">Instagram</a>
+            <a href="https://www.tiktok.com/@nagareaqp?lang=es-419">TikTok</a>
+        </div>
+
+    </div>
+
+    <div class="nagare-copy">
+
+        © 2026 Nagare Coffee & Matcha | Todos los derechos reservados
+
+    </div>
+
+</footer>
+<script src="../JS/Pedido.js"></script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - Nagare Coffe & Matcha</title>
+    <link rel="stylesheet" href="../CSS/Principal.css">
+</head>
+<body>
+    <header class="nagare-header">
+
+    <!-- BARRA SUPERIOR -->
+    <div class="nagare-topbar">
+
+        <div class="nagare-logo">
+
+            <img src="../IMG/Logo_Nagare.jpg" alt="Nagare">
+
+            <div>
+                <h1>NAGARE</h1>
+                <span>Coffee & Matcha</span>
+            </div>
+
+        </div>
+
+        <div class="nagare-top-menu">
+
+            <a href="Login.html">👤 Iniciar Sesión</a>
+
+            <a href="Contacto.html">📞 Contacto</a>
+
+            <a href="Pedido.html">🛒 Pedido</a>
+
+        </div>
+
+        <div class="nagare-hamburguesa" id="btnMenu">
+            ☰
+        </div>
+
+    </div>
+
+
+    <!-- MARQUEE -->
+    <div class="nagare-marquee">
+
+        <marquee behavior="scroll" direction="left" scrollamount="6">
+            🌸 Conoce la historia, esencia y pasión detrás de Nagare Coffee & Matcha ☕
+        </marquee>
+
+    </div>
+
+
+</header>
+
+
+<!-- MENÚ FUERA DEL HEADER -->
+<nav class="nagare-navbar">
+
+    <ul>
+
+        <li><a href="Inicio.html">Inicio</a></li>
+        <li><a href="Menu.html">Menú</a></li>
+        <li><a href="Eventos.html">Eventos</a></li>
+        <li><a href="Promociones.html">Promociones</a></li>
+        <li><a href="Delivery.html">Delivery</a></li>
+        <li><a href="Reservas.html">Reservas</a></li>
+        <li><a href="Nosotros.html" class="activo">Nosotros</a></li>
+        <li><a href="Reseñas.html">Reseñas</a></li>
+
+    </ul>
+
+</nav>
+
+   
+<section id="nosotros" class="nagare-nosotros-section">
+    
+    <!-- HERO COMPONENT -->
+    <div class="nagare-hero-nosotros">
+        <div class="nagare-hero-texto">
+            <h2>☕ Sobre Nosotros</h2>
+            <p>Nagare Coffee & Matcha nace inspirado en la tranquilidad, la cultura japonesa y el amor por el café artesanal.</p>
+            <p>Nuestro objetivo es crear una experiencia única donde cada bebida transmita calma, sabor y conexión.</p>
+        </div>
+        <div class="nagare-hero-video">
+            <video autoplay muted loop playsinline controls>
+                <source src="../VID/local.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <!-- HISTORIA COMPONENT -->
+    <div class="nagare-historia">
+        <h2>Nuestra Historia</h2>
+        <p>Desde nuestros inicios buscamos fusionar el diseño ya sea minimalista japonés con la experiencia moderna de una cafetería premium.</p>
+        <p>Cada detalle de Nagare está pensado para brindar comodidad, relajación y una experiencia visual elegante.</p>
+    </div>
+
+    <!-- REJILLA DE INFORMACIÓN INTERACTIVA -->
+    <div id="nagare-info-grid" class="nagare-info-grid">
+
+        <!-- Card 1: Café -->
+        <div class="nagare-info-card">
+            <div class="nagare-media-wrapper">
+                <video autoplay muted loop playsinline controls>
+                    <source src="../VID/cafepremium.mp4" type="video/mp4">
+                </video>
+            </div>
+            <h3>☕ Café Premium</h3>
+            <p>Seleccionamos granos de alta calidad para obtener sabores intensos y balanceados.</p>
+        </div>
+
+        <!-- Card 2: Matcha -->
+        <div class="nagare-info-card">
+            <div class="nagare-media-wrapper">
+                <picture>
+                    <source media="(max-width: 576px)" srcset="../IMG/matchajapones-mobile.jpg">
+                    <img src="../IMG/matchajapones.jpg" alt="Matcha Japonés" loading="lazy">
+                </picture>
+            </div>
+            <h3>🍵 Matcha Japonés</h3>
+            <p>Utilizamos matcha auténtico inspirado en ceremonias tradicionales de Japón.</p>
+        </div>
+
+        <!-- Card 3: Ambiente -->
+        <div class="nagare-info-card">
+            <div class="nagare-media-wrapper">
+                <video autoplay muted loop playsinline controls>
+                    <source src="../VID/ambienteunico.mp4" type="video/mp4">
+                </video>
+            </div>
+            <h3>🎌 Ambiente Único</h3>
+            <p>Espacios modernos y relajantes ideales para estudiar, trabajar o compartir momentos.</p>
+        </div>
+
+        <!-- Card 4: Postres -->
+        <div class="nagare-info-card">
+            <div class="nagare-media-wrapper">
+                <picture>
+                    <source media="(max-width: 576px)" srcset="../IMG/postresartesanales-mobile.jpg">
+                    <img src="../IMG/postresartesanales.jpg" alt="Postres Artesanales" loading="lazy">
+                </picture>
+            </div>
+            <h3>🍰 Postres Artesanales</h3>
+            <p>Postres preparados cuidadosamente para acompañar de forma idónea cada bebida.</p>
+        </div>
+
+        <!-- Card 5: Baristas -->
+        <div class="nagare-info-card">
+            <div class="nagare-media-wrapper">
+                <video autoplay muted loop playsinline controls>
+                    <source src="../VID/baristas.mp4" type="video/mp4">
+                </video>
+            </div>
+            <h3>👨‍🍳 Baristas Expertos</h3>
+            <p>Nuestro equipo está altamente capacitado en técnicas modernas de extracción de café.</p>
+        </div>
+
+        <!-- Card 6: Eventos -->
+        <div class="nagare-info-card">
+            <div class="nagare-media-wrapper">
+                <picture>
+                    <source media="(max-width: 576px)" srcset="../IMG/eventos-mobile.jpg">
+                    <img src="../IMG/eventos.jpg" alt="Eventos Especiales" loading="lazy">
+                </picture>
+            </div>
+            <h3>🎉 Eventos Especiales</h3>
+            <p>Organizamos noches temáticas, talleres interactivos y experiencias exclusivas.</p>
+        </div>
+
+    </div>
+
+    <!-- VALORES COMPONENT -->
+    <div id="nagare-valores" class="nagare-valores">
+        <h2>Nuestros Valores</h2>
+        <div class="nagare-valores-flex">
+            <div class="nagare-valor-item">
+                <h3>💚 Calidad</h3>
+                <p>Ingredientes frescos y productos premium certificados.</p>
+            </div>
+            <div class="nagare-valor-item">
+                <h3>🤝 Atención</h3>
+                <p>Brindamos una experiencia cálida, empática y amigable.</p>
+            </div>
+            <div class="nagare-valor-item">
+                <h3>🌸 Experiencia</h3>
+                <p>Creamos momentos especiales y memorables en cada visita.</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<footer class="nagare-footer">
+
+    <div class="nagare-footer-contenido">
+
+        <div class="nagare-columna">
+
+            <img src="../IMG/Logo_Nagare.jpg" alt="Logo">
+
+            <h2>NAGARE</h2>
+
+            <p>Coffee & Matcha</p>
+
+        </div>
+
+        <div class="nagare-columna">
+
+            <h3>Contacto</h3>
+
+            <p>📧 nagarecoffee@gmail.com</p>
+
+            <p>📍 Arequipa - Perú</p>
+
+            <p>📞 +51 999 999 999</p>
+
+        </div>
+
+        <div class="nagare-columna">
+
+            <h3>Horario</h3>
+
+            <p>Lunes - Domingo</p>
+
+            <p>08:00 am - 10:00 pm</p>
+
+        </div>
+
+        <div class="nagare-columna">
+
+            <h3>Síguenos</h3>
+            <a href="https://www.facebook.com/profile.php?id=61587873415537">Facebook</a>
+            <a href="https://www.instagram.com/nagarecoffee.aqp/">Instagram</a>
+            <a href="https://www.tiktok.com/@nagareaqp?lang=es-419">TikTok</a>
+        </div>
+
+    </div>
+
+    <div class="nagare-copy">
+
+        © 2026 Nagare Coffee & Matcha | Todos los derechos reservados
+
+    </div>
+
+</footer>
+<script src="../JS/Nosotros.js"></script>
+</body>
+</html>

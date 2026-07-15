@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Nagare Coffe & Matcha</title>
+    <link rel="stylesheet" href="../CSS/principal.css">
+</head>
+<body>
+
+<section class="nagare-login">
+
+    <div class="nagare-contenedor">
+
+<!-- ==================== LOGIN ==================== -->
+
+<div class="nagare-formulario nagare-login-form">
+
+    <!-- CAMBIO 1 -->
+    <form id="loginForm">
+
+        <h1>☕ NAGARE</h1>
+
+        <p>Coffee & Matcha</p>
+
+        <div class="nagare-input">
+
+            <!-- CAMBIO 2 -->
+            <input
+                type="text"
+                id="usuario"
+                placeholder="Usuario"
+                required>
+
+        </div>
+
+        <div class="nagare-input">
+
+            <input
+                type="password"
+                id="loginPassword"
+                placeholder="Contraseña"
+                required>
+
+            <button
+                type="button"
+                class="nagare-ojo"
+                onclick="mostrarLogin()">
+
+                👁
+
+            </button>
+
+        </div>
+
+        <a href="#">¿Olvidaste tu contraseña?</a>
+
+        <!-- CAMBIO 3 -->
+        <button
+            type="submit"
+            class="nagare-btn">
+
+            Iniciar Sesión
+
+        </button>
+
+    </form>
+
+</div>
+
+        <!-- ==================== REGISTRO ==================== -->
+
+        <div class="nagare-formulario nagare-registro-form">
+
+            <form>
+
+                <h1>Crear Cuenta</h1>
+
+                <p>Únete a Nagare Coffee</p>
+
+                <div class="nagare-input">
+
+                    <input
+                        type="text"
+                        placeholder="Nombre completo"
+                        required>
+
+                </div>
+
+                <div class="nagare-input">
+
+                    <input
+                        type="email"
+                        placeholder="Correo electrónico"
+                        required>
+
+                </div>
+
+                <div class="nagare-input">
+
+                    <input
+                        type="password"
+                        id="registerPassword"
+                        placeholder="Contraseña"
+                        required>
+
+                    <button
+                        type="button"
+                        class="nagare-ojo"
+                        onclick="mostrarRegistro()">
+
+                        👁
+
+                    </button>
+
+                </div>
+
+                <button
+                    type="submit"
+                    class="nagare-btn">
+
+                    Registrarse
+
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- ==================== PANEL ==================== -->
+
+        <div class="nagare-panel">
+
+            <div class="nagare-panel-login">
+
+                <img
+                    src="../IMG/Logo_Nagare.jpg"
+                    alt="Nagare"
+                    class="nagare-logo">
+
+                <h2>¡Bienvenido!</h2>
+
+                <p>
+
+                    Inicia sesión para continuar
+                    disfrutando de Nagare Coffee & Matcha.
+
+                </p>
+
+                <button
+                    id="btnLogin"
+                    class="nagare-panel-btn">
+
+                    Iniciar Sesión
+
+                </button>
+
+            </div>
+
+            <div class="nagare-panel-registro">
+
+                <img
+                    src="../IMG/Logo_Nagare.jpg"
+                    alt="Nagare"
+                    class="nagare-logo">
+
+                <h2>¿Nuevo aquí?</h2>
+
+                <p>
+
+                    Regístrate y descubre el sabor
+                    del auténtico café y matcha japonés.
+
+                </p>
+
+                <button
+                    id="btnRegistro"
+                    class="nagare-panel-btn">
+
+                    Registrarse
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="../JS/login.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Nagare Coffe & Matcha</title>
+    <link rel="stylesheet" href="../CSS/Principal.css">
+</head>
+<body>
+    <header class="nagare-header">
+
+    <!-- BARRA SUPERIOR -->
+    <div class="nagare-topbar">
+
+        <div class="nagare-logo">
+
+            <img src="../IMG/Logo_Nagare.jpg" alt="Nagare">
+
+            <div>
+                <h1>NAGARE</h1>
+                <span>Coffee & Matcha</span>
+            </div>
+
+        </div>
+
+        <div class="nagare-top-menu">
+
+            <a href="Login.html">👤 Iniciar Sesión</a>
+
+            <a href="Contacto.html">📞 Contacto</a>
+
+            <a href="Pedido.html">🛒 Pedido</a>
+
+        </div>
+
+        <div class="nagare-hamburguesa" id="btnMenu">
+            ☰
+        </div>
+
+    </div>
+
+
+    <!-- MARQUEE -->
+    <div class="nagare-marquee">
+
+        <marquee behavior="scroll" direction="left" scrollamount="6">
+            🎵 Vive experiencias únicas con noches acústicas, talleres y eventos especiales en Nagare 🎉
+        </marquee>
+    </div>
+</header>
+
+<!-- MENÚ FUERA DEL HEADER -->
+<nav class="nagare-navbar">
+
+    <ul>
+
+        <li><a href="Inicio.html">Inicio</a></li>
+        <li><a href="Menu.html">Menú</a></li>
+        <li><a href="Eventos.html"  class="activo">Eventos</a></li>
+        <li><a href="Promociones.html">Promociones</a></li>
+        <li><a href="Delivery.html">Delivery</a></li>
+        <li><a href="Reservas.html">Reservas</a></li>
+        <li><a href="Nosotros.html">Nosotros</a></li>
+        <li><a href="Reseñas.html">Reseñas</a></li>
+
+    </ul>
+</nav>
+
+   
+<div class="nagare-events-layout">
+
+    <section class="nagare-events-section">
+        <!-- 1. Animación por Deslizamiento -->
+        <h2 class="nagare-title-slide">Eventos Especiales</h2>
+        <p class="nagare-subtitle">Disfruta de experiencias únicas diseñadas para los amantes del buen café y el matcha tradicional</p>
+
+        <!-- Contenedor cuadriculado perfectamente centrado -->
+        <div class="nagare-cards-grid">
+
+            <!-- Tarjeta 1: Transformación por Rotación -->
+            <div class="nagare-card nagare-card-rotate">
+                <div class="nagare-img-wrapper">
+                    <img src="../IMG/workshop.jpg" alt="Latte Art Workshop">
+                </div>
+                <div class="nagare-card-body">
+                    <h3>☕ Latte Art Workshop</h3>
+                    <p>Aprende técnicas profesionales de vertido y diseño de arte latte de forma práctica.</p>
+                    <span class="nagare-date">15 Junio - 7:00 PM</span>
+                    <!-- 5. Transición de Longitudes Diferentes -->
+                    <button class="nagare-btn nagare-btn-lengths" onclick="abrirModal('modal-reservar')">Reservar</button>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2: Transformación por Torsión (Skew) -->
+            <div class="nagare-card nagare-card-skew">
+                <div class="nagare-img-wrapper">
+                    <img src="../IMG/nocheacustica.jpg" alt="Noche Acústica">
+                </div>
+                <div class="nagare-card-body">
+                    <h3>🎵 Noche Acústica</h3>
+                    <p>Música acústica en vivo acompañada de nuestra selección de cafés especiales de origen.</p>
+                    <span class="nagare-date">20 Junio - 8:00 PM</span>
+                    <!-- 6. Transición de Intervalos Parciales -->
+                    <button class="nagare-btn nagare-btn-steps-partial" onclick="abrirModal('modal-detalles')">Ver Detalles</button>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3: Transformación por Desplazamiento -->
+            <div class="nagare-card nagare-card-translate">
+                <div class="nagare-img-wrapper">
+                    <img src="../IMG/degustacion.jpg" alt="Matcha Experience">
+                </div>
+                <div class="nagare-card-body">
+                    <h3>🍵 Matcha Experience</h3>
+                    <p>Degustación guiada e introducción al matcha ceremonial directo de Shizuoka, Japón.</p>
+                    <span class="nagare-date">25 Junio - 6:00 PM</span>
+                    <!-- 7. Transición de Intervalos Completos -->
+                    <button class="nagare-btn nagare-btn-steps-full" onclick="abrirModal('modal-info')">Más Info</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+
+<!-- Modal 1: Reservar -->
+<div id="modal-reservar" class="nagare-modal">
+    <div class="nagare-modal-content">
+        <span class="nagare-close-btn" onclick="cerrarModal('modal-reservar')">Cerrar</span>
+        <div class="nagare-modal-header">
+            <div class="nagare-modal-icon">🍂</div>
+            <h2>Reserva tu Espacio</h2>
+            <p>Latte Art Workshop &bull; Cupos Limitados</p>
+        </div>
+        <form class="nagare-modal-form" onsubmit="procesarFormulario(event, 'Tu cupo para el Workshop ha sido reservado. Te enviamos los detalles de pago al correo.')">
+            <div class="nagare-input-group">
+                <input type="text" placeholder=" " id="reg-name" required>
+                <label for="reg-name">Nombre completo</label>
+            </div>
+            <div class="nagare-input-group">
+                <input type="email" placeholder=" " id="reg-email" required>
+                <label for="reg-email">Correo electrónico</label>
+            </div>
+            <button type="submit" class="nagare-btn-lengths nagare-btn-modal-submit">Confirmar Inscripción</button>
+        </form>
+    </div>
+</div>
+
+<!-- Modal 2: Ver Detalles -->
+<div id="modal-detalles" class="nagare-modal">
+    <div class="nagare-modal-content">
+        <span class="nagare-close-btn" onclick="cerrarModal('modal-detalles')">Cerrar</span>
+        <div class="nagare-modal-header">
+            <div class="nagare-modal-icon">🌙</div>
+            <h2>Noche Acústica</h2>
+            <p>Música en vivo & Selección de origen</p>
+        </div>
+        <div class="nagare-details-body">
+            <p class="nagare-details-desc">Un espacio íntimo diseñado para desconectar. Disfruta de cantautores locales en formato acústico mientras nuestro barista prepara filtrados exclusivos de la noche.</p>
+            <div class="nagare-details-meta">
+                <div class="meta-item"><span>Fecha</span><strong>Viernes, 20 Junio</strong></div>
+                <div class="meta-item"><span>Horario</span><strong>8:00 PM - 11:00 PM</strong></div>
+                <div class="meta-item"><span>Acceso</span><strong>Consumo mínimo</strong></div>
+            </div>
+        </div>
+        <button class="nagare-btn-steps-partial nagare-btn-modal-submit" onclick="cerrarModal('modal-detalles')">Agregar a mi Agenda</button>
+    </div>
+</div>
+
+<!-- Modal 3: Más Info -->
+<div id="modal-info" class="nagare-modal">
+    <div class="nagare-modal-content">
+        <span class="nagare-close-btn" onclick="cerrarModal('modal-info')">Cerrar</span>
+        <div class="nagare-modal-header">
+            <div class="nagare-modal-icon">🌱</div>
+            <h2>Matcha Experience</h2>
+            <p>Grado Ceremonial de Origen Japones</p>
+        </div>
+        <div class="nagare-details-body">
+            <p class="nagare-details-desc">Descubre el ritual detrás de la bebida más saludable del mundo. En esta sesión aprenderás sobre la cosecha a la sombra en Uji, Kioto, y dominarás el uso del <em>Chasen</em> para conseguir la textura perfecta.</p>
+            <div class="nagare-info-highlight">
+                ✨ Incluye degustación de 3 variedades de Matcha y un recetario digital.
+            </div>
+        </div>
+        <button class="nagare-btn-steps-full nagare-btn-modal-submit" onclick="cerrarModal('modal-info')">Regresar a Eventos</button>
+    </div>
+</div>
+
+
+<footer class="nagare-footer">
+
+    <div class="nagare-footer-contenido">
+
+        <div class="nagare-columna">
+
+            <img src="../IMG/Logo_Nagare.jpg" alt="Logo">
+
+            <h2>NAGARE</h2>
+
+            <p>Coffee & Matcha</p>
+
+        </div>
+
+        <div class="nagare-columna">
+
+            <h3>Contacto</h3>
+
+            <p>📧 nagarecoffee@gmail.com</p>
+
+            <p>📍 Arequipa - Perú</p>
+
+            <p>📞 +51 999 999 999</p>
+
+        </div>
+
+        <div class="nagare-columna">
+
+            <h3>Horario</h3>
+
+            <p>Lunes - Domingo</p>
+
+            <p>08:00 am - 10:00 pm</p>
+
+        </div>
+
+        <div class="nagare-columna">
+
+            <h3>Síguenos</h3>
+            <a href="https://www.facebook.com/profile.php?id=61587873415537">Facebook</a>
+            <a href="https://www.instagram.com/nagarecoffee.aqp/">Instagram</a>
+            <a href="https://www.tiktok.com/@nagareaqp?lang=es-419">TikTok</a>
+        </div>
+
+    </div>
+
+    <div class="nagare-copy">
+
+        © 2026 Nagare Coffee & Matcha | Todos los derechos reservados
+
+    </div>
+
+</footer>
+<script src="../JS/Principal.js"></script>
+</body>
+</html>

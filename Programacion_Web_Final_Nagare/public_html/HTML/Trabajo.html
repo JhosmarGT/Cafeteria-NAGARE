@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo - Nagare Coffe & Matcha</title>
+    <link rel="stylesheet" href="../CSS/Principal.css">
+</head>
+<body>
+    <header class="nagare-header">
+
+    <!-- BARRA SUPERIOR -->
+    <div class="nagare-topbar">
+
+        <div class="nagare-logo">
+
+            <img src="../IMG/Logo_Nagare.jpg" alt="Nagare">
+
+            <div>
+                <h1>NAGARE</h1>
+                <span>Coffee & Matcha</span>
+            </div>
+
+        </div>
+
+        <div class="nagare-top-menu">
+
+            <a href="Login.html">👤 Iniciar Sesión</a>
+
+            <a href="Contacto.html">📞 Contacto</a>
+
+            <a href="Pedido.html">🛒 Pedido</a>
+
+        </div>
+
+        <div class="nagare-hamburguesa" id="btnMenu">
+            ☰
+        </div>
+
+    </div>
+
+
+    <!-- MARQUEE -->
+    <div class="nagare-marquee">
+
+        <marquee behavior="scroll" direction="left" scrollamount="6">
+            💼 Únete a nuestro equipo y forma parte de la experiencia Nagare Coffee & Matcha ☕
+        </marquee>
+
+    </div>
+
+
+</header>
+
+
+<!-- MENÚ FUERA DEL HEADER -->
+<nav class="nagare-navbar">
+
+    <ul>
+
+        <li><a href="Inicio.html">Inicio</a></li>
+        <li><a href="Menu.html">Menú</a></li>
+        <li><a href="Eventos.html">Eventos</a></li>
+        <li><a href="Promociones.html">Promociones</a></li>
+        <li><a href="Delivery.html">Delivery</a></li>
+        <li><a href="Reservas.html">Reservas</a></li>
+        <li><a href="Nosotros.html">Nosotros</a></li>
+        <li><a href="Reseñas.html">Reseñas</a></li>
+
+    </ul>
+
+</nav>
+
+<section class="nagare-trabajo-section">
+    <div class="nagare-trabajo-box">
+
+        <div class="nagare-trabajo-header">
+            <h2>💼 Trabaja con Nosotros</h2>
+            <p>¿Te apasiona el café de especialidad y el matcha? Únete a nuestro equipo y crece con nosotros.</p>
+        </div>
+
+        <form class="nagare-form-trabajo" onsubmit="event.preventDefault(); alert('✨ ¡Postulación recibida con éxito! Revisaremos tu CV y nos pondremos en contacto contigo.'); this.reset();">
+
+            <!-- Fila 1: Nombre Completo -->
+            <div class="nagare-trabajo-grupo">
+                <input type="text" id="trabajo-nombre" placeholder=" " required>
+                <label for="trabajo-nombre">Nombre completo</label>
+            </div>
+
+            <!-- Fila 2: Dos Columnas (Correo y Teléfono) -->
+            <div class="nagare-trabajo-grid">
+                <div class="nagare-trabajo-grupo">
+                    <input type="email" id="trabajo-correo" placeholder=" " required>
+                    <label for="trabajo-correo">Correo electrónico</label>
+                </div>
+
+                <div class="nagare-trabajo-grupo">
+                    <input type="tel" id="trabajo-telefono" placeholder=" " required>
+                    <label for="trabajo-telefono">Teléfono / WhatsApp</label>
+                </div>
+            </div>
+
+            <!-- Fila 3: Selección de Puesto -->
+            <div class="nagare-trabajo-grupo">
+                <select id="trabajo-puesto" required>
+                    <option value="" disabled selected hidden></option>
+                    <option value="Barista">Barista (Especialista en Café & Matcha)</option>
+                    <option value="Mesero">Personal de Salón (Mesero/a)</option>
+                    <option value="Cajero">Cajero / Atención al Cliente</option>
+                </select>
+                <label for="trabajo-puesto">Puesto al que postulas</label>
+            </div>
+
+            <!-- SUGERENCIA UX: Campo Premium para Adjuntar CV -->
+            <div class="nagare-trabajo-grupo-file">
+                <label class="nagare-file-label">
+                    <span class="nagare-file-icon">📁</span>
+                    <span class="nagare-file-text">Adjuntar Currículum Vitae (PDF o DOCX)</span>
+                    <input type="file" id="trabajo-cv" accept=".pdf,.docx" required>
+                </label>
+            </div>
+
+            <!-- Fila 5: Cuéntanos sobre ti -->
+            <div class="nagare-trabajo-grupo">
+                <textarea id="trabajo-mensaje" rows="4" placeholder=" " required></textarea>
+                <label for="trabajo-mensaje">Cuéntanos sobre ti y tu experiencia...</label>
+            </div>
+
+            <button type="submit" class="nagare-btn-trabajo">Enviar Solicitud</button>
+
+        </form>
+    </div>
+</section>
+
+
+<footer class="nagare-footer">
+
+    <div class="nagare-footer-contenido">
+
+        <div class="nagare-columna">
+
+            <img src="../IMG/Logo_Nagare.jpg" alt="Logo">
+
+            <h2>NAGARE</h2>
+
+            <p>Coffee & Matcha</p>
+
+        </div>
+
+        <div class="nagare-columna">
+
+            <h3>Contacto</h3>
+
+            <p>📧 nagarecoffee@gmail.com</p>
+
+            <p>📍 Arequipa - Perú</p>
+
+            <p>📞 +51 999 999 999</p>
+
+        </div>
+
+        <div class="nagare-columna">
+
+            <h3>Horario</h3>
+
+            <p>Lunes - Domingo</p>
+
+            <p>08:00 am - 10:00 pm</p>
+
+        </div>
+
+        <div class="nagare-columna">
+
+            <h3>Síguenos</h3>
+            <a href="https://www.facebook.com/profile.php?id=61587873415537">Facebook</a>
+            <a href="https://www.instagram.com/nagarecoffee.aqp/">Instagram</a>
+            <a href="https://www.tiktok.com/@nagareaqp?lang=es-419">TikTok</a>
+        </div>
+
+    </div>
+
+    <div class="nagare-copy">
+
+        © 2026 Nagare Coffee & Matcha | Todos los derechos reservados
+
+    </div>
+
+</footer>
+<script src="../JS/Principal.js"></script>
+</body>
+</html>
